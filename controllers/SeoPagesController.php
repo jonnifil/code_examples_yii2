@@ -14,7 +14,6 @@ use app\modules\admin\forms\search\SearchSeoPage;
 use app\modules\admin\forms\search\SearchSeoPagePriority;
 use app\modules\admin\forms\SeoPages;
 use Yii;
-use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 
 class SeoPagesController extends AdminController
@@ -23,7 +22,9 @@ class SeoPagesController extends AdminController
     public $layout ="admin";
 
 
-
+    /**
+     * @return mixed
+     */
     public function actionIndex()
     {
         $searchModel = new SearchSeoPage();
@@ -39,6 +40,7 @@ class SeoPagesController extends AdminController
     }
 
     /**
+     * Добавление страницы
      * @return mixed
      */
     public function actionCreate()
@@ -55,6 +57,7 @@ class SeoPagesController extends AdminController
     }
 
     /**
+     * Редактирование страницы
      * @param $id
      * @return mixed
      */
@@ -78,6 +81,7 @@ class SeoPagesController extends AdminController
     }
 
     /**
+     * Порядок отображения
      * @return mixed
      */
     public function actionPagePriority()
@@ -95,6 +99,7 @@ class SeoPagesController extends AdminController
     }
 
     /**
+     * Создание пары ссылок отображения
      * @return mixed
      */
     public function actionCreatePriority()
@@ -111,6 +116,7 @@ class SeoPagesController extends AdminController
     }
 
     /**
+     * Редактирование пары ссылок отображения
      * @param $id
      * @return mixed
      */

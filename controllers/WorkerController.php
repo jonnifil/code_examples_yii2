@@ -25,20 +25,6 @@ class WorkerController extends UserGlobalController
 {
     public $layout = "admin";
 
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Ограничиваем доступ всем, кроме админа

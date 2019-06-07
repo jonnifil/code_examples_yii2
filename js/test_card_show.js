@@ -1,6 +1,4 @@
-/**
- * Created by jonni on 29.08.16.
- */
+
 var test_card;
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
@@ -60,7 +58,6 @@ TestCard.prototype = {
         var $this = this;
         show_confirm('Вы действительно хотите начать тестирование?', function(){
             $this.test_dialog.init();
-           // $this.test_dialog.timer();
         });
     }
 
